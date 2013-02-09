@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>The Middleman</title>
+    
+    <link href="stylesheets/app.css?1360383578" media="screen" rel="stylesheet" type="text/css" />
+    <script src="javascripts/all.js?1360383573" type="text/javascript"></script>
+  </head>
+  
+  <body class="index">
+    <div class='row'>
+  <div class='seven columns centered'>
+    <fieldset>
+      <legend>
+        <h4>Magmamakaawa ka kaya sa prof mo??</h4>
+      </legend>
+      <div class='panel'>
+        Enter your scores and we will predict your fate this semester
+      </div>
+      <form>
+        <div class='row'>
+          <div class='three columns'>
+            <label class='right inline'>Quizzes</label>
+            <!-- / Theory : How eager a student is to pass the subject -->
+          </div>
+          <div class='nine columns'>
+            <div class='six columns'>
+              <input id="quizzes_score" placeholder="Score" name="quizzes_score" type="text" />
+            </div>
+            <div class='six columns'>
+              <input id="quizzes_total" placeholder="Total" name="quizzes_total" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='three columns'>
+            <label class='right inline'>Homeworks</label>
+            <!-- / Theory : Homework measure consistency -->
+          </div>
+          <div class='nine columns'>
+            <div class='six columns'>
+              <input id="homeworks_score" placeholder="Score" name="homeworks_score" type="text" />
+            </div>
+            <div class='six columns'>
+              <input id="homeworks_total" placeholder="Total" name="homeworks_total" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='three columns'>
+            <label class='right inline'>Project</label>
+            <!-- / Theory : Projects measure creativity/cunning -->
+          </div>
+          <div class='nine columns'>
+            <div class='six columns'>
+              <input id="projects_score" placeholder="Score" name="projects_score" type="text" />
+            </div>
+            <div class='six columns'>
+              <input id="projects_total" placeholder="Total" name="projects_total" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='three columns'>
+            <label class='right inline'>Midterms</label>
+            <!-- / See `Finals` below then divide that by zero -->
+          </div>
+          <div class='nine columns'>
+            <div class='six columns'>
+              <input id="midterms_score" placeholder="Score" name="midterms_score" type="text" />
+            </div>
+            <div class='six columns'>
+              <input id="midterms_total" placeholder="Total" name="midterms_total" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='three columns'>
+            <label class='right inline'>Finals</label>
+            <!-- / Theory : Measure of a student's capacity to retain useless knowledge -->
+          </div>
+          <div class='nine columns'>
+            <div class='six columns'>
+              <input id="finals_score" placeholder="Score" name="finals_score" type="text" />
+            </div>
+            <div class='six columns'>
+              <input id="finals_total" placeholder="Total" name="finals_total" type="text" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </fieldset>
+    <div class='alert-box style' id='prediction' style='display:none'></div>
+    <div class='alert-box style' id='verdict' style='display:none'></div>
+    <div class='even'>
+      <input id="predict" class="button twelve columns" value="Predict" type="button" />
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

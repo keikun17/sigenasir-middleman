@@ -1,0 +1,80 @@
+.row
+  .seven.columns.centered
+    %fieldset
+      %legend
+        %h4 Magmamakaawa ka kaya sa prof mo??
+
+      .panel
+        Enter your scores and we will predict your fate this semester
+      -# .row.tabs
+      -#   .eleven.columns
+      -#     .tabs
+      -#       %dl.tabs.small.right#class_type_switcher
+      -#         %dd.active= link_to "Lecture"
+      -#         %dd= link_to "Laboratory (*unavailable*)"
+      -#   .one.columns
+
+      %form
+        .row
+          .three.columns
+            %label.right.inline Quizzes
+            // Theory : How eager a student is to pass the subject
+          .nine.columns
+            .six.columns
+              = text_field_tag :quizzes_score, :id => :quizzes_score, :placeholder => "Score"
+            .six.columns
+              = text_field_tag :quizzes_total, :id => :quizzes_total, :placeholder => "Total"
+        .row
+          .three.columns
+            %label.right.inline Homeworks
+            // Theory : Homework measure consistency
+          .nine.columns
+            .six.columns
+              = text_field_tag :homeworks_score, :id => :homeworks_score, :placeholder => "Score"
+            .six.columns
+              = text_field_tag :homeworks_total, :id => :homeworks_total, :placeholder => "Total"
+        .row
+          .three.columns
+            %label.right.inline Project
+            // Theory : Projects measure creativity/cunning
+          .nine.columns
+            .six.columns
+              = text_field_tag :projects_score, :id => :projects_score, :placeholder => "Score"
+            .six.columns
+              = text_field_tag :projects_total, :id => :projects_total, :placeholder => "Total"
+        .row
+          .three.columns
+            %label.right.inline Midterms
+            // See `Finals` below then divide that by zero
+          .nine.columns
+            .six.columns
+              = text_field_tag :midterms_score, :id => :midterms_score, :placeholder => "Score"
+            .six.columns
+              = text_field_tag :midterms_total, :id => :midterms_total, :placeholder => "Total"
+        .row
+          .three.columns
+            %label.right.inline Finals
+            // Theory : Measure of a student's capacity to retain useless knowledge
+          .nine.columns
+            .six.columns
+              = text_field_tag :finals_score, :id => :finals_score, :placeholder => "Score"
+            .six.columns
+              = text_field_tag :finals_total, :id => :finals_total, :placeholder => "Total"
+        -# .row
+        -#   .eight.columns.centered{:style => "text-align:center"}
+        -#     // Theory : Alam naman natin na dito rin bagsak niyan e
+        -#     %label Gaano ka TERROR ang prof?
+        -# .row
+        -#   .four.columns
+        -#     %label.right.inline 
+        -#       0
+        -#   .four.columns
+        -#     = range_field_tag :terror_level, 50, {:min => '1', :max => 100, :style => "width:100%"}
+        -#   .four.columns
+        -#     %label.inline All of it
+      
+    #prediction.alert-box.style{:style => 'display:none'}
+    #verdict.alert-box.style{:style => 'display:none'}
+    .even
+      = button_tag "Predict", :id => :predict, :class => "button twelve columns"
+
